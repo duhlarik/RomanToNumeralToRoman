@@ -23,6 +23,7 @@ public class RomanToNumeralToRoman {
 		for (int i = 0; i < roman.length(); i++) {
 			int right = rightRoman(roman, i);
 			int current = RomanToNumber.get(String.valueOf(roman.charAt(i)));
+			// I think this is messy and would like to refactor it, but I'm not sure how
 			if (right > current) {
 				current *= -1;
 			}
