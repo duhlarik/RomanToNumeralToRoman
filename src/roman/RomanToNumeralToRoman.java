@@ -22,8 +22,8 @@ public class RomanToNumeralToRoman {
 		int result = 0;
 		for (int i = 0; i < roman.length(); i++) {
 			int right = rightRoman(roman, i);
-			int current = RomanToNumber.get(String.valueOf(roman.charAt(i)));
-			// I think this is messy and would like to refactor it, but I'm not sure how
+			String currentRoman = roman.substring(i, i+1);
+			int current = RomanToNumber.get(currentRoman);
 			if (right > current) {
 				current *= -1;
 			}
